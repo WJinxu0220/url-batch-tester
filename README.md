@@ -4,7 +4,7 @@
 
 ## 功能特性
 
-\- 📁 支持CSV导入URL列表（兼容UTF-8/GBK编码）
+- 📁 支持CSV导入URL列表（兼容UTF-8/GBK编码）
 
 - ⚡ 多线程并发访问（可配置并发数）
 - 🔄 失败自动重试（可配置重试次数）
@@ -21,8 +21,25 @@
 
 ## 环境要求
 
-\- Python 3.7+
+\- Python 3.7
 
 ## 安装依赖
 
-pip install -r requirements.txt
+PIP install -r requirements.txt
+
+## 使用方法
+
+1、克隆 / 下载项目到本地
+2、安装依赖：pip install -r requirements.txt
+3、运行工具：python url_batch_tester.py
+4、配置参数：
+- 输入 CSV 文件：需包含url列（必填），可选method（请求方法）、data（POST 数据）、headers、cookies列
+- 超时时间：建议 5-10 秒
+- 并发数：建议 10-20（过高易被目标服务器拦截）
+- 重试次数：0-3 次（解决临时网络波动）
+5、点击「开始运行」，等待执行完成后可导出结果
+
+
+
+
+
